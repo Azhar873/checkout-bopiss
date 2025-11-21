@@ -14,7 +14,7 @@
     "nx:dev": "nx run core:dev",
     "preinstall": "npx check-node-version --package",
     "prebuild": "rimraf dist && rimraf packages/test-framework/report",
-    "build": "npm-run-all nx:build",
+    "build": "nx exec -- npm-run-all nx:build",
     "build:server": "http-server dist",
     "typecheck": "tsc --noEmit -p ./tsconfig.base.json",
     "dev": "npm-run-all nx:dev",
@@ -196,5 +196,6 @@
     "scripts": {
       "prebump": "./scripts/standard-version/prebump.js"
     }
-  }
+  },
+  "nx": {}
 }
