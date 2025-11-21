@@ -175,7 +175,7 @@ jobs:
             git config user.name $GIT_USER_NAME
       - run:
           name: "Remove old release files"
-          command: rm -rf dist
+          command: rimraf dist
       - attach_workspace:
           at: .
       - run:
